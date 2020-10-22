@@ -1,0 +1,81 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  font-family: "montserrat";
+}
+
+body {
+  background: linear-gradient(180deg, #050505 0%, #2B0B08 29.78%, #540706 65.72%, #B30807 100%);
+  background-repeat: no-repeat;
+  /*margin: 30px auto;*/
+  
+}
+
+.container {
+  /*width: 100%;*/
+  /*margin: 50px auto;*/
+}
+
+.header {
+  text-align: center;
+}
+
+.logo img {
+  height: 150px;
+}
+
+input {
+  width: 300px;
+  height: 30px;
+  border-radius: 30px
+}
+
+section {
+  margin-top: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+
+/* TAKE OBJECT FAR FROM PERSPECTIVE VIEW */
+
+.card {
+  /* background-color: #0000aa; */
+  perspective: 1000px;
+  margin: 1rem;
+}
+
+
+/* SET SAME COLUMN AND ROW FOR BOTH CARD */
+
+.card-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  transition: all 1s ease;
+  transform-style: preserve-3d;
+}
+
+.card-front {
+  grid-area: 1 / 1;
+}
+
+.card-back {
+  background-color: white;
+  grid-area: 1 / 1;
+  transform: rotateY(180deg);
+}
+
+
+/* FIX CARD IMAGES WIDTH */
+
+.card-container img {
+  width: 18rem;
+  height: 22rem;
+  margin-bottom: -5px;
+}
+
+.card:hover .card-container {
+  transform: rotateY(180deg);
+}
