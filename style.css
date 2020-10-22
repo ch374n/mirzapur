@@ -8,7 +8,7 @@
 body {
   background: linear-gradient(180deg, #050505 0%, #2B0B08 29.78%, #540706 65.72%, #B30807 100%);
   background-repeat: no-repeat;
-  
+  min-height: 100vh;
 }
 
 
