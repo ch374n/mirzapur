@@ -4,22 +4,76 @@ const input = document.querySelector('input')
 let characters = [
 	{
 		name: "Munna Bhaiyya", 
-		actorName: "Pankaj Tripathi", 
+		actorName: "Divyendu Sharma", 
 		status: "Alive", 
-		image: "img1.jpeg" 
+		image: "images/Munna.jpg" 
 	}, 
 	{
 		name: "Kaleen Bhaiyya", 
 		actorName: "Pankaj Tripathi", 
 		status: "Alive", 
-		image: "img2.jpeg"
+		image: "images/kalin.jpg"
 	}, 
 	{
 		name: "Bablu Bhaiyya", 
-		actorName: "Pankaj Tripathi", 
+		actorName: "Vikrant Massey", 
+		status: "Dead",
+		image: "images/babalu.jpg"
+	},
+	{
+		name: "Beena Tripathi", 
+		actorName: "Rasika Dugal", 
 		status: "Alive",
-		image: "img3.jpeg"
+		image: "images/Beena.jpg"
+	},
+	{
+		name: "Sweety Gupta", 
+		actorName: "Shiriya Pilgaonkar", 
+		status: "Dead",
+		image: "images/GudduGF.jpg"
+	},
+	{
+		name: "Guddu Bhaiyya", 
+		actorName: "Ali Fazal's", 
+		status: "Alive",
+		image: "images/Guddu.jpg"
+	},
+	{
+		name: "Ramakant Pandit", 
+		actorName: "Rajesh Tailang", 
+		status: "Alive",
+		image: "images/Ramakant.jpg"
+	},
+	{
+		name: "Satyanand Tripathi", 
+		actorName: "KulBhushan Kharbanda", 
+		status: "Alive",
+		image: "images/KalinsFather.jpg"
+	},  
+	{
+		name: "Vasudha", 
+		actorName: "Sheeba Chaddha", 
+		status: "Alive",
+		image: "images/GuddusMonther.jpg"
+	},
+	{
+		name: "Golu", 
+		actorName: "Shweta Tripathi", 
+		status: "Alive",
+		image: "images/Golu.jpg"
 	}, 
+	{
+		name: "Dimpy", 
+		actorName: "Harshita Gaur", 
+		status: "Alive",
+		image: "images/GuddusSister.jpg"
+	}, 
+	{
+		name: "Maqbool Khan", 
+		actorName: "Shaji Chaudhary", 
+		status: "Alive",
+		image: "images/Maqbool.jpg"
+	},    
 ]
 
 
