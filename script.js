@@ -1,14 +1,62 @@
-images = [
-  "https://source.unsplash.com/featured/?mountains",
-  "https://source.unsplash.com/featured/?hiking",
-  "https://source.unsplash.com/featured/?kayak",
-  "https://source.unsplash.com/featured/?forest",
-  "https://source.unsplash.com/featured/?mountain"
-  "https://source.unsplash.com/featured/?trail"
-  "https://source.unsplash.com/featured/?outdoors"
-"https://source.unsplash.com/featured/?norway"
+const grid = document.querySelector('section') 
+const input = document.querySelector('input')
+
+let characters = [
+	{
+		name: "Munna Bhaiyya", 
+		actorName: "Pankaj Tripathi", 
+		status: "Alive", 
+		image: "img1.jpeg" 
+	}, 
+	{
+		name: "Kaleen Bhaiyya", 
+		actorName: "Pankaj Tripathi", 
+		status: "Alive", 
+		image: "img2.jpeg"
+	}, 
+	{
+		name: "Bablu Bhaiyya", 
+		actorName: "Pankaj Tripathi", 
+		status: "Alive",
+		image: "img3.jpeg"
+	}, 
 ]
 
-$('div.card-image').each ->
-  random_image_index = Math.floor(images.length * Math.random())
-  $(this).css('background-image', 'url(' + images[random_image_index] + ')')
+
+function init(characters) {
+	const code = [] 
+	// number of characters 
+
+	characters.forEach(({ name, actorName, image, status }) => {
+		code.push(`
+			<div class="card">
+	            <div class="card-container">
+	               <div class="card-front" style="background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.8) 100%), url(./${image}); background-repeat: no-repeat; background-size: cover; background-position: center center;">
+	               </div>
+	               <div class="card-back">
+	                  	<div class="name">${name}</div> 
+	                  	<div class="actor_name">Actor name: ${actorName}</div> 
+	                  	<div class="status">Status: ${status}</div> 
+	               </div>
+	            </div>
+	         </div>
+		`)
+	})
+
+	grid.innerHTML = code.join('')  		
+}
+
+window.addEventListener('DOMContentLoaded', () => {
+	init(characters) 
+	console.log("loaded", characters)
+})
+
+
+
+input.addEventListener("keyup", (e) => {
+	const { value } = e.target 
+	console.log(value)
+	const filtered = characters.filter(({ name }) => name.toLowerCase().includes(value.toLowerCase()))
+	console.log(filtered)
+	init(filtered) 
+})
